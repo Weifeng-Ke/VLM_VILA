@@ -20,7 +20,7 @@ Performing Prefix Caching on VLM model VILA
 	python vila_prefix_benchmark.py \
     		--num-runs 10 \
     		--model-path Efficient-Large-Model/VILA1.5-3b \
-    		--image-path /workspace/VILA/demo_images/demo_img.png \
+    		--image-path /workspace/VLM_VILA/VILA/demo_images/demo_img.png \
     		--text-prompt "Please describe the image." \
     		--conv-mode vicuna_v1
 ```
