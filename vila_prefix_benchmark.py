@@ -25,7 +25,7 @@ from llava.media import Image
 parser = argparse.ArgumentParser(description="Benchmark ViLA prefix caching.")
 parser.add_argument("--num-runs", type=int, default=3, help="Number of repeated runs for averaging.")
 parser.add_argument("--model-path", type=str, default="Efficient-Large-Model/VILA1.5-3b", help="Model name or path.")
-parser.add_argument("--image-path", type=str, default="/workspace/VILA/demo_images/demo_img.png", help="Path to image file.")
+parser.add_argument("--image-path", type=str, default="/workspace/VLM_VILA/VILA/demo_images/demo_img.png", help="Path to image file.")
 parser.add_argument("--text-prompt", type=str, default="Please describe the image.", help="Text prompt to run.")
 parser.add_argument("--conv-mode", type=str, default="vicuna_v1", help="Conversation template mode.")
 args = parser.parse_args()
