@@ -24,3 +24,73 @@ Performing Prefix Caching on VLM model VILA
     		--text-prompt "Please describe the image." \
     		--conv-mode vicuna_v1
 ```
+<summary> VILA-1.5 contributors </summary>
+
+[\*Yao Lu](https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en): Nvidia, [\*Hongxu Yin](https://hongxu-yin.github.io/): Nvidia, [\*Ji Lin](https://www.linji.me/): OpenAI (work done at Nvidia and MIT), [Wei Ping](https://scholar.google.com/citations?user=6gKEYRgAAAAJ&hl=en): Nvidia, [Pavlo Molchanov](https://www.pmolchanov.com/): Nvidia, [Andrew Tao](https://scholar.google.com/citations?user=Wel9l1wAAAAJ&hl=en): Nvidia, [Haotian Tang](http://kentang.net/): MIT, [Shang Yang](https://ys-2020.github.io/): MIT, [Ligeng Zhu](https://lzhu.me/): Nvidia, MIT, [Wei-Chen Wang](https://weichenwang.me/): MIT, [Fuzhao Xue](https://xuefuzhao.github.io/): Nvidia, NUS, [Yunhao Fang](https://seerkfang.github.io/): Nvidia, UCSD, [Yukang Chen](https://yukangchen.com/): Nvidia, [Zhuoyang Zhang](https://openreview.net/profile?id=~Zhuoyang_Zhang1): Nvidia, [Yue Shen](https://www.linkedin.com/in/yue-james-shen/): Nvidia, [Wei-Ming Chen](https://scholar.google.com/citations?user=6xFvyJwAAAAJ&hl=en): Nvidia, [Huizi Mao](https://scholar.google.com/citations?user=r5WezOYAAAAJ&hl=zh-CN): Nvidia, [Baifeng Shi](https://bfshi.github.io/): Nvidia, UC Berkeley, [Jan Kautz](https://jankautz.com/): Nvidia, [Mohammad Shoeybi](https://scholar.google.com/citations?user=62ElavIAAAAJ&hl=en): Nvidia, [Song Han](http://songhan.mit.edu/): Nvidia, MIT
+
+</details>
+
+## Citations
+
+```bibtex
+@misc{liu2024nvila,
+      title={NVILA: Efficient Frontier Visual Language Models},
+      author={Zhijian Liu and Ligeng Zhu and Baifeng Shi and Zhuoyang Zhang and Yuming Lou and Shang Yang and Haocheng Xi and Shiyi Cao and Yuxian Gu and Dacheng Li and Xiuyu Li and Yunhao Fang and Yukang Chen and Cheng-Yu Hsieh and De-An Huang and An-Chieh Cheng and Vishwesh Nath and Jinyi Hu and Sifei Liu and Ranjay Krishna and Daguang Xu and Xiaolong Wang and Pavlo Molchanov and Jan Kautz and Hongxu Yin and Song Han and Yao Lu},
+      year={2024},
+      eprint={2412.04468},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.04468},
+}
+```
+```bibtex
+@article{chen2025longvila-r1,
+      title={Scaling RL to Long Videos},
+      author={Yukang Chen and Wei Huang and Baifeng Shi and Qinghao Hu and Hanrong Ye and Ligeng Zhu and Zhijian Liu and Pavlo Molchanov and Jan Kautz and Xiaojuan Qi and Sifei Liu and Hongxu Yin and Yao Lu and Song Han},
+      year={2025},
+      eprint={2507.07966},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+```bibtex
+@misc{chen2024longvila,
+      title={LongVILA: Scaling Long-Context Visual Language Models for Long Videos},
+      author={Yukang Chen and Fuzhao Xue and Dacheng Li and Qinghao Hu and Ligeng Zhu and Xiuyu Li and Yunhao Fang and Haotian Tang and Shang Yang and Zhijian Liu and Ethan He and Hongxu Yin and Pavlo Molchanov and Jan Kautz and Linxi Fan and Yuke Zhu and Yao Lu and Song Han},
+      year={2024},
+      eprint={2408.10188},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+```bibtex
+@misc{shi2025scaling,
+      title={Scaling Vision Pre-Training to 4K Resolution}, 
+      author={Baifeng Shi and Boyi Li and Han Cai and Yao Lu and Sifei Liu and Marco Pavone and Jan Kautz and Song Han and Trevor Darrell and Pavlo Molchanov and Hongxu Yin},
+      year={2025},
+      eprint={2503.19903},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.19903},
+}
+```
+
+```bibtex
+@misc{lin2023vila,
+      title={VILA: On Pre-training for Visual Language Models},
+      author={Ji Lin and Hongxu Yin and Wei Ping and Yao Lu and Pavlo Molchanov and Andrew Tao and Huizi Mao and Jan Kautz and Mohammad Shoeybi and Song Han},
+      year={2023},
+      eprint={2312.07533},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+# Acknowledgement
+
+- [LLaVA](https://github.com/haotian-liu/LLaVA): the codebase we built upon. Thanks for their wonderful work.
+- [InternVL](https://github.com/OpenGVLab/InternVL): for open-sourcing InternViT (used in VILA1.5-40b) and the [InternVL-SFT](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat#prepare-training-datasets) data blend (inspired by LLaVA-1.6) used in all VILA1.5 models.
+- [Vicuna](https://github.com/lm-sys/FastChat): the amazing open-sourced large language model!
+- [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT): we borrowed video evaluation script from this repository.
+- [MMC4](https://github.com/allenai/mmc4), [COYO-700M](https://github.com/kakaobrain/coyo-dataset), [M3IT](https://huggingface.co/datasets/MMInstruction/M3IT), [OpenORCA/FLAN](https://huggingface.co/datasets/Open-Orca/FLAN), [ShareGPT4V](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V), [WIT](google-research-datasets/wit), [GSM8K-ScRel](https://github.com/OFA-Sys/gsm8k-ScRel/blob/main/data/train_use.jsonl), [VisualGenome](https://visualgenome.org/api/v0/api_home.html), [VCR](https://visualcommonsense.com/download/), [ScienceQA](https://huggingface.co/datasets/derek-thomas/ScienceQA), [Shot2Story](https://github.com/bytedance/Shot2Story/blob/master/DATA.md), [Youcook2](http://youcook2.eecs.umich.edu/), [Vatex](https://eric-xw.github.io/vatex-website/download.html), [ShareGPT-Video](https://huggingface.co/datasets/ShareGPTVideo/train_video_and_instruction) for providing datasets used in this research.
