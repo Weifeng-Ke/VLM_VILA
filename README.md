@@ -99,9 +99,9 @@ url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, jou
 	journal   = {arXiv preprint arXiv:2407.18003},
 	year      = {2024}
 }
-```bibtex
+```
 
-Citations and acknowledgements below as per VILA's original repository.
+### Citations and acknowledgements below as per VILA's original repository.
 
 
 ```bibtex
