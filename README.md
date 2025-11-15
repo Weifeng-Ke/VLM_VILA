@@ -55,8 +55,7 @@ Cited
 @misc{Bitsandbytes, 
 title={BitsandBytes},
 url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, journal={Bitsandbytes}} 
-```bibtex
-```bibtex
+
 
 @misc{dettmers2023qloraefficientfinetuningquantized,
       title={QLoRA: Efficient Finetuning of Quantized LLMs}, 
@@ -67,8 +66,7 @@ url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, jou
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2305.14314}, 
 }
-```bibtex
-```bibtex
+
 
 @inproceedings{lin2023awq,
   title={AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration},
@@ -76,8 +74,7 @@ url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, jou
   booktitle={MLSys},
   year={2024}
 }
-```bibtex
-```bibtex
+
 
 @misc{vicuna2023,
     title = {Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90\%* ChatGPT Quality},
@@ -86,8 +83,7 @@ url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, jou
     month = {March},
     year = {2023}
 }
-```bibtex
-```bibtex
+
 
 @article{Lin2023VILAOP,
 	title     = {VILA: On Pre-training for Visual Language Models},
@@ -95,8 +91,7 @@ url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, jou
 	journal   = {arXiv preprint arXiv:2312.07533},
 	year      = {2023}
 }
-```bibtex
-```bibtex
+
 
 @article{shi2024costdownreviewmethods,
 	title     = {Keep the Cost Down: A Review on Methods to Optimize LLM's KV-Cache Consumption},
