@@ -1,8 +1,9 @@
 # VLM_VILA
 Performing Prefix Caching on VLM model VILA
-# Installation
-1. Install Anaconda distribution
-2. Install the necessary python packages in the environment
+# Installation and Benchmarking for Prefix Caching
+1. Clone from this repository
+2. Install Anaconda distribution
+3. Install the necessary python packages in the environment
 ```bash
 	./environment_setup.sh vila
 ```
@@ -24,6 +25,24 @@ Performing Prefix Caching on VLM model VILA
     		--text-prompt "Please describe the image." \
     		--conv-mode vicuna_v1
 ```
+
+# Installation and Benchmarking for Quantisation
+1. Clone from Nvidia's VILA repository from https://github.com/NVlabs/VILA
+2. Change into the newly-cloned VILA repository, and run steps 2 to 4 as described earlier
+3. Clone the LLM-AWQ repository from https://github.com/mit-han-lab/llm-awq.git
+4. Follow the relevant installation instructions as per LLM-AWQ, but this time targetting the newly created VILA environment. In particular, run the following:
+```
+cd llm-awq
+pip install --upgrade pip  # enable PEP 660 support
+pip install -e .
+cd awq/kernels
+python setup.py install
+```
+5. The relevant benchmark tests for pre-quantised and quantised models can be found at vila_quantised_bitsandbytes.ipynb and vila_quantised_llm_awq.ipynb.
+
+---
+Cited 
+
 <summary> VILA-1.5 contributors </summary>
 
 [\*Yao Lu](https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en): Nvidia, [\*Hongxu Yin](https://hongxu-yin.github.io/): Nvidia, [\*Ji Lin](https://www.linji.me/): OpenAI (work done at Nvidia and MIT), [Wei Ping](https://scholar.google.com/citations?user=6gKEYRgAAAAJ&hl=en): Nvidia, [Pavlo Molchanov](https://www.pmolchanov.com/): Nvidia, [Andrew Tao](https://scholar.google.com/citations?user=Wel9l1wAAAAJ&hl=en): Nvidia, [Haotian Tang](http://kentang.net/): MIT, [Shang Yang](https://ys-2020.github.io/): MIT, [Ligeng Zhu](https://lzhu.me/): Nvidia, MIT, [Wei-Chen Wang](https://weichenwang.me/): MIT, [Fuzhao Xue](https://xuefuzhao.github.io/): Nvidia, NUS, [Yunhao Fang](https://seerkfang.github.io/): Nvidia, UCSD, [Yukang Chen](https://yukangchen.com/): Nvidia, [Zhuoyang Zhang](https://openreview.net/profile?id=~Zhuoyang_Zhang1): Nvidia, [Yue Shen](https://www.linkedin.com/in/yue-james-shen/): Nvidia, [Wei-Ming Chen](https://scholar.google.com/citations?user=6xFvyJwAAAAJ&hl=en): Nvidia, [Huizi Mao](https://scholar.google.com/citations?user=r5WezOYAAAAJ&hl=zh-CN): Nvidia, [Baifeng Shi](https://bfshi.github.io/): Nvidia, UC Berkeley, [Jan Kautz](https://jankautz.com/): Nvidia, [Mohammad Shoeybi](https://scholar.google.com/citations?user=62ElavIAAAAJ&hl=en): Nvidia, [Song Han](http://songhan.mit.edu/): Nvidia, MIT
@@ -33,6 +52,65 @@ Performing Prefix Caching on VLM model VILA
 ## Citations
 
 ```bibtex
+@misc{Bitsandbytes, 
+title={BitsandBytes},
+url={https://huggingface.co/docs/transformers/en/quantization/bitsandbytes}, journal={Bitsandbytes}} 
+```bibtex
+```bibtex
+
+@misc{dettmers2023qloraefficientfinetuningquantized,
+      title={QLoRA: Efficient Finetuning of Quantized LLMs}, 
+      author={Tim Dettmers and Artidoro Pagnoni and Ari Holtzman and Luke Zettlemoyer},
+      year={2023},
+      eprint={2305.14314},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2305.14314}, 
+}
+```bibtex
+```bibtex
+
+@inproceedings{lin2023awq,
+  title={AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration},
+  author={Lin, Ji and Tang, Jiaming and Tang, Haotian and Yang, Shang and Chen, Wei-Ming and Wang, Wei-Chen and Xiao, Guangxuan and Dang, Xingyu and Gan, Chuang and Han, Song},
+  booktitle={MLSys},
+  year={2024}
+}
+```bibtex
+```bibtex
+
+@misc{vicuna2023,
+    title = {Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90\%* ChatGPT Quality},
+    url = {https://lmsys.org/blog/2023-03-30-vicuna/},
+    author = {Chiang, Wei-Lin and Li, Zhuohan and Lin, Zi and Sheng, Ying and Wu, Zhanghao and Zhang, Hao and Zheng, Lianmin and Zhuang, Siyuan and Zhuang, Yonghao and Gonzalez, Joseph E. and Stoica, Ion and Xing, Eric P.},
+    month = {March},
+    year = {2023}
+}
+```bibtex
+```bibtex
+
+@article{Lin2023VILAOP,
+	title     = {VILA: On Pre-training for Visual Language Models},
+	author    = {Lin, Ji and Yin, Hongxu and Ping, Wei and Lu, Yiyang and Molchanov, Pavel and Tao, Andrew and Mao, Hanrui and Kautz, Jan and Shoeybi, Mohammad and Han, Song},
+	journal   = {arXiv preprint arXiv:2312.07533},
+	year      = {2023}
+}
+```bibtex
+```bibtex
+
+@article{shi2024costdownreviewmethods,
+	title     = {Keep the Cost Down: A Review on Methods to Optimize LLM's KV-Cache Consumption},
+	author    = {Shi, Luohe and Zhang, Hongyi and Yao, Yao and Li, Zuchao and Zhao, Hai},
+	journal   = {arXiv preprint arXiv:2407.18003},
+	year      = {2024}
+}
+```bibtex
+
+Citations and acknowledgements below as per VILA's original repository.
+
+
+```bibtex
+
 @misc{liu2024nvila,
       title={NVILA: Efficient Frontier Visual Language Models},
       author={Zhijian Liu and Ligeng Zhu and Baifeng Shi and Zhuoyang Zhang and Yuming Lou and Shang Yang and Haocheng Xi and Shiyi Cao and Yuxian Gu and Dacheng Li and Xiuyu Li and Yunhao Fang and Yukang Chen and Cheng-Yu Hsieh and De-An Huang and An-Chieh Cheng and Vishwesh Nath and Jinyi Hu and Sifei Liu and Ranjay Krishna and Daguang Xu and Xiaolong Wang and Pavlo Molchanov and Jan Kautz and Hongxu Yin and Song Han and Yao Lu},
